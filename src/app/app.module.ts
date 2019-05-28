@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { VelibListComponent } from './components/velib-list/velib-list.component';
 import { VelibMapComponent } from './components/velib-map/velib-map.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './partials/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VelibListComponent,
-    VelibMapComponent
+    VelibMapComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
