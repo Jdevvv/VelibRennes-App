@@ -8,6 +8,8 @@ import { VelibMapComponent } from './components/velib-map/velib-map.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './partials/header/header.component';
 
+import { AgmCoreModule } from '@agm/core'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,10 @@ import { HeaderComponent } from './partials/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBLqDH9fSg_yuMc02PWPFXGfGnkm9t1z_g'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
