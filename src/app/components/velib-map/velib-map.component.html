@@ -5,7 +5,11 @@
   >
 
   <agm-info-window>
-    
+    <h3>{{ aVelib.fields.nom }}</h3>( {{ aVelib.fields.idstation }} )
+    <p>{{ aVelib.fields.etat }}</p>
+    <p>Disponibilité</p>
+    <p>Vélos disponibles : {{ aVelib.fields.nombrevelosdisponibles }}</p>
+    <p> Emplacements disponibles : {{ aVelib.fields.nombreemplacementsdisponibles }}</p>
   </agm-info-window>
 
   </agm-marker>
