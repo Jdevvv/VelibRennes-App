@@ -1,16 +1,16 @@
-<agm-map [latitude]="latitude" [longitude]="longitude">
-  <agm-marker *ngFor='let aVelib of velib?.records'
-              [latitude]="aVelib.fields.coordonnees[0]"
-              [longitude]="aVelib.fields.coordonnees[1]"
-  >
+<div class="map">
+  <agm-map [latitude]="latitude" [longitude]="longitude"  [zoom]="10">
+    <agm-marker *ngFor='let aVelib of velib?.records' [latitude]="aVelib.fields.coordonnees[0]"
+      [longitude]="aVelib.fields.coordonnees[1]" [iconUrl]="icon">
 
-  <agm-info-window>
-    <h3>{{ aVelib.fields.nom }}</h3>( {{ aVelib.fields.idstation }} )
-    <p>{{ aVelib.fields.etat }}</p>
-    <p>Disponibilité</p>
-    <p>Vélos disponibles : {{ aVelib.fields.nombrevelosdisponibles }}</p>
-    <p> Emplacements disponibles : {{ aVelib.fields.nombreemplacementsdisponibles }}</p>
-  </agm-info-window>
+      <agm-info-window>
+        <h3>{{ aVelib.fields.nom }}</h3>( {{ aVelib.fields.idstation }} )
+        <p>{{ aVelib.fields.etat }}</p>
+        <p>Disponibilité</p>
+        <p>Vélos disponibles : {{ aVelib.fields.nombrevelosdisponibles }}</p>
+        <p> Emplacements disponibles : {{ aVelib.fields.nombreemplacementsdisponibles }}</p>
+      </agm-info-window>
 
-  </agm-marker>
-</agm-map>
+    </agm-marker>
+  </agm-map>
+</div>

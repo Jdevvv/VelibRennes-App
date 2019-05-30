@@ -15,6 +15,14 @@ export class VelibMapComponent implements OnInit {
 
   velib: Velib[];
 
+  icon = {
+    url: './assets/bikeMarker.png',
+    scaledSize: {
+      width: 60,
+      height: 55
+    }
+  }
+
   constructor(private velibService: VelibService) { }
 
   ngOnInit() {
