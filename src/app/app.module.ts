@@ -13,6 +13,7 @@ import { AgmCoreModule } from '@agm/core';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { FooterComponent } from './partials/footer/footer.component';
 
 registerLocaleData(localeFr);
 
@@ -21,7 +22,8 @@ registerLocaleData(localeFr);
     AppComponent,
     VelibListComponent,
     VelibMapComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

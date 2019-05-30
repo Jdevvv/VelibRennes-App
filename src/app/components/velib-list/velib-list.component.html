@@ -1,30 +1,26 @@
-<div class="card">
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr class="mr-ml-3">
-          <th scope="col">Station (ID)</th>
-          <th scope="col">Noms</th>
-          <th scope="col">Coordonnées</th>
-          <th scope="col">Etat</th>
-          <th scope="col">Emplacements actuels</th>
-          <th scope="col">Emplacements disponibles</th>
-          <th scope="col">Vélos disponibles</th>
-          <th scope="col">Dernières mises à jour</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor='let aVelib of velib?.records'>
-          <td>{{ aVelib.fields.idstation }}</td>
-          <td>{{ aVelib.fields.nom }}</td>
-          <td>{{ aVelib.fields.coordonnees }}</td>
-          <td>{{ aVelib.fields.etat }}</td>
-          <td>{{ aVelib.fields.nombreemplacementsactuels }}</td>
-          <td>{{ aVelib.fields.nombreemplacementsdisponibles }}</td>
-          <td>{{ aVelib.fields.nombrevelosdisponibles }}</td>
-          <td>{{ aVelib.fields.lastupdate | date: 'dd MMMM yyyy HH:mm' : '+0200'}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Station (ID)</th>
+      <th scope="col">Noms</th>
+      <th scope="col">Coordonnées</th>
+      <th scope="col">Etat</th>
+      <th scope="col">Emplacements actuels</th>
+      <th scope="col">Emplacements disponibles</th>
+      <th scope="col">Vélos disponibles</th>
+      <th scope="col">Dernières mises à jour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let aVelib of velib?.records'>
+      <td>{{ aVelib.fields.idstation }}</td>
+      <td>{{ aVelib.fields.nom }}</td>
+      <td>{{ aVelib.fields.coordonnees }}</td>
+      <td>{{ aVelib.fields.etat }}</td>
+      <td>{{ aVelib.fields.nombreemplacementsactuels }}</td>
+      <td>{{ aVelib.fields.nombreemplacementsdisponibles }}</td>
+      <td>{{ aVelib.fields.nombrevelosdisponibles }}</td>
+      <td>{{ aVelib.fields.lastupdate }}</td>
+    </tr>
+  </tbody>
+</table>

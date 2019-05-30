@@ -4,11 +4,11 @@
       [longitude]="aVelib.fields.coordonnees[1]" [iconUrl]="icon">
 
       <agm-info-window>
-        <h3>{{ aVelib.fields.nom }}</h3>( {{ aVelib.fields.idstation }} )
-        <p>{{ aVelib.fields.etat }}</p>
-        <p>Disponibilité</p>
-        <p>Vélos disponibles : {{ aVelib.fields.nombrevelosdisponibles }}</p>
-        <p> Emplacements disponibles : {{ aVelib.fields.nombreemplacementsdisponibles }}</p>
+        <p class="h2">{{ aVelib.fields.nom }}( {{ aVelib.fields.idstation }} )</p>
+        <p class="font-weight-bold">{{ aVelib.fields.etat }}</p>
+        <p class="font-weight-bold text-danger">Disponibilité</p>
+        <p><span class="font-italic pr-1">Vélos disponibles :</span> {{ aVelib.fields.nombrevelosdisponibles }}</p>
+        <p><span class="font-italic pr-1"> Emplacements disponibles :</span> {{ aVelib.fields.nombreemplacementsdisponibles }}</p>
       </agm-info-window>
 
     </agm-marker>
