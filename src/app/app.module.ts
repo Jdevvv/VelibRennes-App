@@ -6,9 +6,15 @@ import { AppComponent } from './app.component';
 import { VelibListComponent } from './components/velib-list/velib-list.component';
 import { VelibMapComponent } from './components/velib-map/velib-map.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './partials/header/header.component';
+import { HeaderComponent } from './partials/header/header.component'; 
 
-import { AgmCoreModule } from '@agm/core'
+import { AgmCoreModule } from '@agm/core';
+
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [
@@ -25,7 +31,7 @@ import { AgmCoreModule } from '@agm/core'
       apiKey: 'AIzaSyBLqDH9fSg_yuMc02PWPFXGfGnkm9t1z_g'
     })
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: "fr-CA" }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
