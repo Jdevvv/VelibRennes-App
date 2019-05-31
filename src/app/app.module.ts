@@ -7,13 +7,13 @@ import { VelibListComponent } from './components/velib-list/velib-list.component
 import { VelibMapComponent } from './components/velib-map/velib-map.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './partials/header/header.component'; 
+import { FooterComponent } from './partials/footer/footer.component';
 
 import { AgmCoreModule } from '@agm/core';
 
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
-import { FooterComponent } from './partials/footer/footer.component';
 
 registerLocaleData(localeFr);
 

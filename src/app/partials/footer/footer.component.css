@@ -2,4 +2,7 @@ footer .bg-light {
     height: 100px;
     line-height: 100px;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

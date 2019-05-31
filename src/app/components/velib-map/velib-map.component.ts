@@ -15,6 +15,7 @@ export class VelibMapComponent implements OnInit {
 
   velib: Velib[];
 
+  //Custom icon
   icon = {
     url: './assets/bikeMarker.png',
     scaledSize: {
